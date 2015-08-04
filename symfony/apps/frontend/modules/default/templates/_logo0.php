@@ -1,0 +1,1 @@
+<div id="logo"><a href="http://p-poster.com" title="Авторские фотопостеры"><img src="http://p-poster.com/images/h-logo.jpg" widtt="131" height="87" alt="Авторские фотопостеры" title="Авторские фотопостеры" /></a></div>

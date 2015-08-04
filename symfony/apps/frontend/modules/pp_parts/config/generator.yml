@@ -1,0 +1,6 @@
+generator:
+  class:                   sfPropelAdminGenerator
+  param:
+    model_class:           Parts
+    list:
+      max_per_page:        4

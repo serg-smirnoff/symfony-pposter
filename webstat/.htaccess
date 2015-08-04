@@ -1,0 +1,6 @@
+AuthType Basic
+AuthName "/www/p-poster.com/webstat"
+AuthUserFile /var/www/serg-smirnoff/data/etc/663290.passwd
+<Limit GET POST>
+	require valid-user
+</Limit>

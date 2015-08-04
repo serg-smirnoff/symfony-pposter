@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin
+Disallow: /sfPropelPlugin
+Disallow: /sfProtoculousPlugin
+Disallow: /cart/clear/
+Disallow: /pp_part/
+Disallow: /pp_part/*
+Disallow: /pp_part/id/*
+Disallow: /pp_photos/
+Disallow: /pp_photos/cart/id/*/
+Host: p-poster.com
+Sitemap: http://p-poster.com/sitemap.xml

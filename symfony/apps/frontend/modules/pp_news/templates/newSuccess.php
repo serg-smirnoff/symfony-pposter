@@ -1,0 +1,61 @@
+<div id="main">
+<div id="top">
+<div id="topInner">
+<?php include_partial('default/logo0'); ?>
+<?php include_partial('default/menu', array('menu' => $menu, 'parts' => $parts)); ?>
+
+<div id="basket" alt="Корзина" title="Корзина"><img src="/images/i-cart.png" width="18" height="15" alt="Корзина" title="Корзина" />
+    <div id="basketInner">
+	<?php
+	if (isset($_COOKIE["sfCart"])){
+		$positions = explode(":", $_COOKIE["sfCart"]);
+   		$countPositions = sizeOf($positions);
+    }
+	$totalPrice = 0;
+	foreach ($positions as $k => $v){
+   		$posC = new Criteria();
+		$posC->add(PhotosPeer::ID, $v);
+   		$photo = PhotosPeer::doSelect($posC);
+        if (sizeOf($photo) > 0)
+          	$totalPrice = $totalPrice+$photo[0]->getPrice();
+ 		}
+  	?>
+  	<a href="http://p-poster.com/cart">В корзине <strong><?php echo $countPositions; ?></strong> постеров<br /> на сумму <strong><?php echo $totalPrice; ?></strong> руб.</a>
+	<div id="basketOrder">
+		<a style="text-decoration: none;" href="http://p-poster.com/cart/clear/" title="очистить корзину">[ x ] очистить</a><br />
+		<strong id="order"><a href="http://p-poster.com/cart/order/" title="оформить заказ">оформить заказ</a></strong>
+	</div>
+	</div>
+</div>
+
+</div>
+</div>
+<div id="items">
+<div id="itemsInner">
+<div id="bc"><a href="http://p-poster.com" title="Главная">Главная</a>&nbsp;/&nbsp;<a href="http://p-poster.com/news/" title="Новости">Новости</a>&nbsp;/&nbsp;<?php echo $new->getTitle(); ?></div>
+<div>
+	<div><?php echo $new->getText(); ?></div>
+	<br />
+	<div><a href="http://p-poster.com/news/" title="Все новости">Все новости</a></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<?php include_partial('default/bmenu0'); ?>
+<div id="footer">
+<div id="footerInner">
+<div id="footerInner2">
+<?php include_partial('default/bmenu1', array('menu' => $menu)); ?>
+<?php include_partial('default/copy'); ?>
+</div>
+<div id="counters"><?php include_partial('default/counters'); ?></div>
+<div id="flogo"><?php include_partial('default/logo1'); ?></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

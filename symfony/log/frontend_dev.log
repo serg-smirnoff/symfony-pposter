@@ -1,0 +1,411 @@
+Jun 06 19:43:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:41 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 06 19:43:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:43:41 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:43:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:43:41 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jun 06 19:43:41 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:43:41 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:43:42 symfony [debug] {sfPropelLogger} prepare: SELECT pp_parts.ID, pp_parts.ORD, pp_parts.PHOTO, pp_parts.NAME, pp_parts.DESCRIPTION, pp_parts.IS_ACTIVE, pp_parts.CREATED_AT FROM `pp_parts` WHERE pp_parts.IS_ACTIVE=:p1
+Jun 06 19:43:42 symfony [debug] {sfPropelLogger} Binding 1 at position :p1 w/ PDO type PDO::PARAM_INT
+Jun 06 19:43:42 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/default/templates/indexSuccess.php"
+Jun 06 19:43:42 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:43:42 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:43:42 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:43:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:43:42 symfony [info] {sfWebDebugLogger} Configuration 386.44 ms (9)
+Jun 06 19:43:42 symfony [info] {sfWebDebugLogger} Action "default/index" 120.27 ms (1)
+Jun 06 19:43:42 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 37.03 ms (1)
+Jun 06 19:43:42 symfony [info] {sfWebResponse} Send content (28762 o)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4e83c9094f7e8cabed7230b40648af09.jpg with parameters array (  '4e83c9094f7e8cabed7230b40648af09.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:43 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:43 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:43 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:43:43 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:43:43 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:43 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/6a6d8b852791d8824c223a4296ee1f53.jpg with parameters array (  '6a6d8b852791d8824c223a4296ee1f53.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/e99244d59d92bda9e854fa03d073828c.jpg with parameters array (  'e99244d59d92bda9e854fa03d073828c.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/f46914aec5a942af5c46addf2509d884.jpg with parameters array (  'f46914aec5a942af5c46addf2509d884.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/2ce7e29f52a3307cea89b6c312e55565.jpg with parameters array (  '2ce7e29f52a3307cea89b6c312e55565.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:43:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4b05e4ca209658b7b51a56a4d8a11ae9.jpg with parameters array (  '4b05e4ca209658b7b51a56a4d8a11ae9.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:43:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:43:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:15 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:15 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:15 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:15 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 06 19:44:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:44:15 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:44:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:44:15 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jun 06 19:44:15 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:44:15 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:44:15 symfony [debug] {sfPropelLogger} prepare: SELECT pp_parts.ID, pp_parts.ORD, pp_parts.PHOTO, pp_parts.NAME, pp_parts.DESCRIPTION, pp_parts.IS_ACTIVE, pp_parts.CREATED_AT FROM `pp_parts` WHERE pp_parts.IS_ACTIVE=:p1
+Jun 06 19:44:15 symfony [debug] {sfPropelLogger} Binding 1 at position :p1 w/ PDO type PDO::PARAM_INT
+Jun 06 19:44:15 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/default/templates/indexSuccess.php"
+Jun 06 19:44:15 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:15 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:15 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:44:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:44:15 symfony [info] {sfWebDebugLogger} Configuration 59.46 ms (9)
+Jun 06 19:44:15 symfony [info] {sfWebDebugLogger} Action "default/index" 20.37 ms (1)
+Jun 06 19:44:15 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 34.63 ms (1)
+Jun 06 19:44:15 symfony [info] {sfWebResponse} Send content (28729 o)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:21 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:21 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/e99244d59d92bda9e854fa03d073828c.jpg with parameters array (  'e99244d59d92bda9e854fa03d073828c.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:21 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4e83c9094f7e8cabed7230b40648af09.jpg with parameters array (  '4e83c9094f7e8cabed7230b40648af09.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:21 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/6a6d8b852791d8824c223a4296ee1f53.jpg with parameters array (  '6a6d8b852791d8824c223a4296ee1f53.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:21 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:21 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/f46914aec5a942af5c46addf2509d884.jpg with parameters array (  'f46914aec5a942af5c46addf2509d884.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:22 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:22 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/2ce7e29f52a3307cea89b6c312e55565.jpg with parameters array (  '2ce7e29f52a3307cea89b6c312e55565.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:22 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:22 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4b05e4ca209658b7b51a56a4d8a11ae9.jpg with parameters array (  '4b05e4ca209658b7b51a56a4d8a11ae9.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:22 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:22 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:41 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jun 06 19:44:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:44:41 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:44:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:44:41 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jun 06 19:44:41 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:44:41 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:44:41 symfony [debug] {sfPropelLogger} prepare: SELECT pp_parts.ID, pp_parts.ORD, pp_parts.PHOTO, pp_parts.NAME, pp_parts.DESCRIPTION, pp_parts.IS_ACTIVE, pp_parts.CREATED_AT FROM `pp_parts` WHERE pp_parts.IS_ACTIVE=:p1
+Jun 06 19:44:41 symfony [debug] {sfPropelLogger} Binding 1 at position :p1 w/ PDO type PDO::PARAM_INT
+Jun 06 19:44:41 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/default/templates/indexSuccess.php"
+Jun 06 19:44:41 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:41 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:41 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:44:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:44:41 symfony [info] {sfWebDebugLogger} Configuration 52.11 ms (9)
+Jun 06 19:44:41 symfony [info] {sfWebDebugLogger} Action "default/index" 22.15 ms (1)
+Jun 06 19:44:41 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 21.58 ms (1)
+Jun 06 19:44:41 symfony [info] {sfWebResponse} Send content (28795 o)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:43 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:43 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:43 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:44:43 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:43 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4e83c9094f7e8cabed7230b40648af09.jpg with parameters array (  '4e83c9094f7e8cabed7230b40648af09.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/6a6d8b852791d8824c223a4296ee1f53.jpg with parameters array (  '6a6d8b852791d8824c223a4296ee1f53.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/e99244d59d92bda9e854fa03d073828c.jpg with parameters array (  'e99244d59d92bda9e854fa03d073828c.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/f46914aec5a942af5c46addf2509d884.jpg with parameters array (  'f46914aec5a942af5c46addf2509d884.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:44 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:44 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/2ce7e29f52a3307cea89b6c312e55565.jpg with parameters array (  '2ce7e29f52a3307cea89b6c312e55565.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:45 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:45 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /uploads/photos/4b05e4ca209658b7b51a56a4d8a11ae9.jpg with parameters array (  '4b05e4ca209658b7b51a56a4d8a11ae9.jpg' => true,  'module' => 'uploads',  'action' => 'photos',)
+Jun 06 19:44:45 symfony [info] {sfFrontWebController} Action "uploads/photos" does not exist
+Jun 06 19:44:45 symfony [err] {sfError404Exception} Action "uploads/photos" does not exist.
+Jun 06 19:44:46 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:46 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:46 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:46 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /pp_photos with parameters array (  'module' => 'pp_photos',  'action' => 'index',)
+Jun 06 19:44:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:44:46 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:44:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:44:46 symfony [info] {pp_photosActions} Call "pp_photosActions->executeIndex()"
+Jun 06 19:44:46 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:44:46 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:44:46 symfony [debug] {sfPropelLogger} prepare: SELECT pp_photos.ID, pp_photos.PART_ID, pp_photos.AUTHOR_ID, pp_photos.META_ID, pp_photos.PHOTO_S, pp_photos.PHOTO_B, pp_photos.SIZE, pp_photos.PRICE, pp_photos.ORD, pp_photos.IS_ACTIVE, pp_photos.CREATED_AT FROM `pp_photos`
+Jun 06 19:44:47 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/pp_photos/templates/indexSuccess.php"
+Jun 06 19:44:47 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:47 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:44:47 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:44:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:44:47 symfony [info] {sfWebDebugLogger} Configuration 65.61 ms (10)
+Jun 06 19:44:47 symfony [info] {sfWebDebugLogger} Action "pp_photos/index" 27.45 ms (1)
+Jun 06 19:44:47 symfony [info] {sfWebDebugLogger} View "Success" for "pp_photos/index" 39.20 ms (1)
+Jun 06 19:44:47 symfony [info] {sfWebResponse} Send content (27895 o)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:49 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:49 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:49 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:44:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:44:49 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:44:49 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:46:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:39 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /pp_photos with parameters array (  'module' => 'pp_photos',  'action' => 'index',)
+Jun 06 19:46:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:46:39 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:46:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:46:39 symfony [info] {pp_photosActions} Call "pp_photosActions->executeIndex()"
+Jun 06 19:46:39 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:46:39 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:46:39 symfony [debug] {sfPropelLogger} prepare: SELECT pp_photos.ID, pp_photos.PART_ID, pp_photos.AUTHOR_ID, pp_photos.META_ID, pp_photos.PHOTO_S, pp_photos.PHOTO_B, pp_photos.SIZE, pp_photos.PRICE, pp_photos.ORD, pp_photos.IS_ACTIVE, pp_photos.CREATED_AT FROM `pp_photos`
+Jun 06 19:46:39 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/pp_photos/templates/indexSuccess.php"
+Jun 06 19:46:39 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:46:39 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:46:39 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:46:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:46:39 symfony [info] {sfWebDebugLogger} Configuration 49.15 ms (9)
+Jun 06 19:46:39 symfony [info] {sfWebDebugLogger} Action "pp_photos/index" 47.19 ms (1)
+Jun 06 19:46:39 symfony [info] {sfWebDebugLogger} View "Success" for "pp_photos/index" 157.61 ms (1)
+Jun 06 19:46:39 symfony [info] {sfWebResponse} Send content (27927 o)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:42 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:46:42 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:46:42 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:46:42 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:46:42 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:46:46 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:46 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:46 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:46 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:46 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /pp_photos with parameters array (  'module' => 'pp_photos',  'action' => 'index',)
+Jun 06 19:46:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:46:46 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:46:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:46:46 symfony [info] {pp_photosActions} Call "pp_photosActions->executeIndex()"
+Jun 06 19:46:46 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:46:46 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:46:46 symfony [debug] {sfPropelLogger} prepare: SELECT pp_photos.ID, pp_photos.PART_ID, pp_photos.AUTHOR_ID, pp_photos.META_ID, pp_photos.PHOTO_S, pp_photos.PHOTO_B, pp_photos.SIZE, pp_photos.PRICE, pp_photos.ORD, pp_photos.IS_ACTIVE, pp_photos.CREATED_AT FROM `pp_photos`
+Jun 06 19:46:46 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/pp_photos/templates/indexSuccess.php"
+Jun 06 19:46:46 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:46:46 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:46:46 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:46:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:46:46 symfony [info] {sfWebDebugLogger} Configuration 428.38 ms (9)
+Jun 06 19:46:46 symfony [info] {sfWebDebugLogger} Action "pp_photos/index" 14.54 ms (1)
+Jun 06 19:46:46 symfony [info] {sfWebDebugLogger} View "Success" for "pp_photos/index" 29.23 ms (1)
+Jun 06 19:46:46 symfony [info] {sfWebResponse} Send content (27893 o)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:49 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/h-logo.jpg" (/).
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-1.jpg with parameters array (  'pic-1.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:46:49 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:46:49 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:46:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/pics/pic-2.jpg with parameters array (  'pic-2.jpg' => true,  'module' => 'images',  'action' => 'pics',)
+Jun 06 19:46:49 symfony [info] {sfFrontWebController} Action "images/pics" does not exist
+Jun 06 19:46:49 symfony [err] {sfError404Exception} Action "images/pics" does not exist.
+Jun 06 19:47:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:47:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:47:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:47:22 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:47:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pp_photos/index with parameters array (  'module' => 'pp_photos',  'action' => 'index',)
+Jun 06 19:47:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 06 19:47:22 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jun 06 19:47:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 06 19:47:22 symfony [info] {pp_photosActions} Call "pp_photosActions->executeIndex()"
+Jun 06 19:47:22 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jun 06 19:47:22 symfony [debug] {sfPropelLogger} prepare: SELECT pp_menu.ID, pp_menu.PARENT_ID, pp_menu.NAME, pp_menu.ANNOUNCE, pp_menu.TEXT, pp_menu.ORD, pp_menu.URL, pp_menu.IS_ACTIVE, pp_menu.CREATED_AT FROM `pp_menu`
+Jun 06 19:47:22 symfony [debug] {sfPropelLogger} prepare: SELECT pp_photos.ID, pp_photos.PART_ID, pp_photos.AUTHOR_ID, pp_photos.META_ID, pp_photos.PHOTO_S, pp_photos.PHOTO_B, pp_photos.SIZE, pp_photos.PRICE, pp_photos.ORD, pp_photos.IS_ACTIVE, pp_photos.CREATED_AT FROM `pp_photos`
+Jun 06 19:47:22 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/modules/pp_photos/templates/indexSuccess.php"
+Jun 06 19:47:22 symfony [info] {sfPHPView} Decorate content with "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:47:22 symfony [info] {sfPHPView} Render "/home/u39809/p-poster.com/apps/frontend/templates/layout.php"
+Jun 06 19:47:22 symfony [info] {sfWebResponse} Send status "HTTP/1.0 200 OK"
+Jun 06 19:47:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 06 19:47:22 symfony [info] {sfWebDebugLogger} Configuration 36.28 ms (9)
+Jun 06 19:47:22 symfony [info] {sfWebDebugLogger} Action "pp_photos/index" 14.67 ms (1)
+Jun 06 19:47:22 symfony [info] {sfWebDebugLogger} View "Success" for "pp_photos/index" 22.60 ms (1)
+Jun 06 19:47:22 symfony [info] {sfWebResponse} Send content (27862 o)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pp_photos/images/pics/pic-2.jpg with parameters array (  'pics' => 'pic-2.jpg',  'module' => 'pp_photos',  'action' => 'images',)
+Jun 06 19:47:26 symfony [info] {sfFrontWebController} Action "pp_photos/images" does not exist
+Jun 06 19:47:26 symfony [err] {sfError404Exception} Action "pp_photos/images" does not exist.
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pp_photos/images/h-logo.jpg with parameters array (  'h-logo.jpg' => true,  'module' => 'pp_photos',  'action' => 'images',)
+Jun 06 19:47:26 symfony [info] {sfFrontWebController} Action "pp_photos/images" does not exist
+Jun 06 19:47:26 symfony [err] {sfError404Exception} Action "pp_photos/images" does not exist.
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Connect sfRoute "parts" (/:module/:id)
+Jun 06 19:47:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /pp_photos/images/pics/pic-1.jpg with parameters array (  'pics' => 'pic-1.jpg',  'module' => 'pp_photos',  'action' => 'images',)
+Jun 06 19:47:26 symfony [info] {sfFrontWebController} Action "pp_photos/images" does not exist
+Jun 06 19:47:26 symfony [err] {sfError404Exception} Action "pp_photos/images" does not exist.

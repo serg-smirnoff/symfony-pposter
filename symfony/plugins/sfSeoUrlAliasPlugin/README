@@ -1,0 +1,74 @@
+#sfSeoUrlAlias plugin#
+
+##Overview##
+
+ The sfGuardPlugin is a symfony plugin.
+ This plugin translate and forward alias to the real destination.
+ All translations from external to internal url stored in database.
+
+##Installation##
+
+  * Install the plugin
+
+        > symfony plugin:install sfSeoUrlAliasPlugin
+
+ or copy files to plugins folder
+
+        > symfony plugin:publish-assets
+
+  * Clear cache
+
+        > symfony cc
+
+##Configuration##
+
+  * Enable the plugin in apps/frontend/config/settings.yml:
+
+        all:
+          .settings:
+            enabled_modules:      [default, sfSeoUrlAlias]
+
+  * Set configuration in apps/frontend/config/app.yml:
+
+        all:
+          sf_seo_url_alias:
+            delimeter: '/'
+            #route_restriction: '^([A-Za-z0-9\_\-\+,])+(\.)+([a-zA-Z0-9\-\_\.\+,])+$'
+
+  * Rebuild sql
+
+        > symfony propel:build-sql
+      (Warning! This command will remove all data in your database.)
+
+        > symfony propel:insert-sql
+      Clear cache
+
+        > symfony cc
+
+##Usage##
+
+  * Restriction of aliases
+
+  Alias must contain:    name.extension (example: article.html)
+
+  * Load sample aliases
+
+        > symfony propel:data-load
+
+  * Example aliases:
+
+    the same destination but diffrent aliases:
+
+        http://yoursite.com/contact-form.html       =>(forward)    http://yoursite.com/article/read/15
+        http://yoursite.com/company-contact-us.html =>(forward)    http://yoursite.com/article/read/15
+
+    diffrent destination and diffrent aliases:
+
+        http://yoursite.com/registerd-users.xls     =>(forward)    http://yoursite.com/user/list
+
+        http://yoursite.com/adam-mickiewicz.xml     =>(forward)    http://yoursite.com/writer/show/321
+
+##License##
+
+ For the full copyright and license information, please view the LICENSE
+ file that was distributed with this source code.

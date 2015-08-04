@@ -1,0 +1,35 @@
+generator:
+  class:                   sfPropelAdminGenerator
+  param:
+    model_class:           Parts
+    theme:                 default
+    fields:
+      id:                  { name: Id }
+      ord:                 { name: Сорт. }
+      meta_id:             { name: Meta }
+      name:                { name: Наименование }
+      description:         { name: Описание }
+      photo:
+        help: фотография 220 х 147
+        name: Фотография
+        type: admin_input_file_tag
+        upload_dir: photos
+        params: include_link=photos include_remove=true
+      is_active:           { name: Акт. }
+      created_at:          { name: Дата }
+    list:
+      title:               Категории
+      layout:              tabular
+      display:             [id,ord,name,description,photo,is_active,created_at]
+      object_actions:
+        _edit:             ~
+        _delete:           ~
+      max_per_page:        15
+    edit:
+      title:               Категории
+      display:             [id,ord,meta_id,name,description,photo,is_active,created_at]
+      fields:
+        ord:               { type: input_tag, params: style=width: 20px; }
+        name:              { type: input_tag, params: style=width: 90%; }
+        description:       { type: textarea_tag, params: style=width: 90%; height: 100px; }
+        created_at:        { type: input_date_tag, params: rich=on }

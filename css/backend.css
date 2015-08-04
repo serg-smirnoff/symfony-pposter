@@ -1,0 +1,13 @@
+table {border: 0px; border-collapse: collapse;}
+table td {padding: 0px;}
+
+.menuPunkt{padding: 7px 12px 7px 12px;display: block;background: #EDE9F2;border-top: 1px solid #746B83;}
+.menuPunkt:hover{padding: 7px 12px 7px 12px;display: block;background: #C6B8D9;border-top: 1px solid #746B83;cursor: hand;cursor: pointer;color: #FF0000;}
+.menuPunktA{padding: 7px 12px 7px 12px;display: block;background: #C6B8D9;border-top: 1px solid #746B83;}
+
+.sub{background: #EDE9F2;border-right: 1px solid #C6B8D9;border-left: 1px solid #C6B8D9;border-bottom: 1px solid #C6B8D9;}
+
+.sPunkt{padding: 4px 12px 4px 12px;}
+.sPunkt:hover{padding: 4px 12px 4px 12px;cursor: hand; cursor: pointer;background: #C6B8D9;}
+.sPunkt a{text-decoration: none;display: block;}
+.sPunkt a:hover{display: block;cursor: hand; cursor: pointer;text-decoration: none;color: #FF0000;}

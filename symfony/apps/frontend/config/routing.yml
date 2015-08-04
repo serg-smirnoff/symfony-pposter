@@ -1,0 +1,71 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+contacts:
+  url:   /contacts
+  param: { module: contacts, action: index }
+
+cart:
+  url:   /cart
+  param: { module: cart, action: index }
+
+cart_clear:
+  url:   /cart/clear
+  param: { module: cart, action: clear }
+
+cart_order:
+  url:   /cart/order
+  param: { module: cart, action: order }
+
+articles:
+  url:   /articles/
+  param: { module: pp_articles, action: index }
+
+article_id:
+  url:   /articles/id/:id
+  param: { module: pp_articles, action: new }
+
+news:
+  url:   /news/
+  param: { module: pp_news, action: index }
+
+new_id:
+  url:   /news/id/:id
+  param: { module: pp_news, action: new }
+
+parts:
+  url:   /parts/
+  param: { module: pp_parts, action: index }
+
+parts_part:
+  url:   /parts/id/:id/
+  param: { module: pp_parts, action: index }
+
+parts_new:
+  url:   /parts/new
+  param: { module: pp_parts, action: new }
+
+photos:
+  url:   /photos/id/:id
+  param: { module: pp_photos, action: index }
+
+photos_0:
+  url:   /photos/cart/id/:id/
+  param: { module: pp_photos, action: cart }
+
+photos_1:
+  url:   /photos/cartdel/id/:id/
+  param: { module: pp_photos, action: cartdel }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+pages:
+  url: /*
+  param: { module: pp_pages, action: index }

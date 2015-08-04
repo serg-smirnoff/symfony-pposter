@@ -1,0 +1,98 @@
+propel:
+  pp_meta:
+    _attributes:          { phpName: Meta }
+    title:                { type: varchar(255), required: true }
+    keywords:             { type: varchar(255), required: true }
+    description:          { type: longvarchar }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_config:
+    _attributes:          { phpName: Config }
+    param:                { type: varchar(255), required: true }
+    value:                { type: varchar(3000), required: true }
+    description:          { type: varchar(500), required: true }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_menu:
+    _attributes:          { phpName: Menu }
+    id: ~
+    parent_id:            { type: integer }
+    name:                 { type: varchar(255), required: true }
+    announce:             { type: varchar(255) }
+    text:                 { type: longvarchar }
+    ord:                  { type: integer }
+    url:                  { type: varchar(255), required: true }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_parts:
+    _attributes:          { phpName: Parts }
+    id: ~
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    ord:                  { type: integer }
+    photo:                { type: varchar(255) }
+    name:                 { type: varchar(255), required: true }
+    description:          { type: varchar(1000) }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_authors:
+    _attributes:          { phpName: Authors }
+    id: ~
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    name:                 { type: varchar(255), required: true }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_photos:
+    _attributes:          { phpName: Photos }
+    id: ~
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    name:                 { type: varchar(255), required: true }
+    description:          { type: varchar(1000) }
+    part_id:              { type: integer, foreignTable: pp_parts, foreignReference: id, onUpdate: RESTRICT }
+    author_id:            { type: integer, foreignTable: pp_authors, foreignReference: id, onUpdate: RESTRICT }
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    photo_s:              { type: varchar(255) }
+    photo_b:              { type: varchar(255) }
+    size:                 { type: varchar(255) }
+    price:                { type: integer }
+    ord:                  { type: varchar(255) }
+    is_new:               { type: boolean, required: true, default: 0 }
+    is_spec:              { type: boolean, required: true, default: 0 }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_pages:
+    _attributes:          { phpName: Pages }
+    id: ~
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    url:                  { type: varchar(255) }
+    title:                { type: varchar(255) }
+    announce:             { type: varchar(255) }
+    text:                 { type: varchar(1000) }
+    ord:                  { type: varchar(255) }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_faq:
+    _attributes:          { phpName: Faq }
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    question:             { type: varchar(1000) }
+    answer:               { type: varchar(1000) }
+    ord:                  { type: varchar(255) }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_articles:
+    _attributes:          { phpName: Articles }
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    title:                { type: varchar(255) }
+    announce:             { type: varchar(1000) }
+    text:                 { type: varchar(10000) }
+    ord:                  { type: varchar(255) }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~
+  pp_news:
+    _attributes:          { phpName: News }
+    meta_id:              { type: integer, foreignTable: pp_meta, foreignReference: id, onUpdate: RESTRICT }
+    title:                { type: varchar(255) }
+    announce:             { type: varchar(1000) }
+    text:                 { type: varchar(10000) }
+    ord:                  { type: varchar(255) }
+    is_active:            { type: boolean, required: true, default: 0 }
+    created_at: ~

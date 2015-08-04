@@ -1,0 +1,47 @@
+generator:
+  class:                   sfPropelAdminGenerator
+  param:
+    model_class:           Photos
+    theme:                 default
+    fields:
+      id:                  { name: Id }
+      ord:                 { name: Сорт. }
+      part_id:             { name: Категория }
+      author_id:           { name: Фотограф }
+      name:                { name: Наименование. }
+      description:         { name: Описание. }
+      photo_s:
+        help: фотография 216 х 298
+        name: Фото
+        type: admin_input_file_tag
+        upload_dir: photos/posters/small
+        params: include_link=photos/posters/small include_remove=true
+      photo_b:
+        help: фотография 640 х 480
+        name: Фото
+        type: admin_input_file_tag
+        upload_dir: photos/posters/big
+        params: include_link=photos/posters/big include_remove=true
+      size:                { name: Размер }
+      price:               { name: Цена }
+      is_new:              { name: Новинка }
+      is_spec:             { name: Спец. }
+      is_active:           { name: Акт. }
+      created_at:          { name: Дата }
+    list:
+      title:               Фотографии
+      layout:              tabular
+      display:             [id,ord,part_id,author_id,name,photo_s,size,price,is_active,created_at]
+      filters:             [part_id,author_id]
+      object_actions:
+        _edit:             ~
+        _delete:           ~
+      max_per_page:        15
+    edit:
+      title:               Категории
+      display:             [id,ord,part_id,author_id,name,description,photo_s,photo_b,size,price,is_new,is_spec,is_active,created_at]
+      fields:
+        ord:               { type: input_tag, params: style=width: 20px; }
+        name:              { type: input_tag, params: style=width: 90%; }
+        description:       { type: textarea_tag, params: style=width: 90%; height: 100px; }
+        created_at:        { type: input_date_tag, params: rich=on }

@@ -1,0 +1,29 @@
+generator:
+  class:                   sfPropelAdminGenerator
+  param:
+    model_class:           Menu
+    theme:                 default
+    fields:
+      id:                  { name: Id }
+      parent_id:           { name: Родитель }
+      ord:                 { name: Сорт. }
+      name:                { name: Наименование }
+      announce:            { name: Описание }
+      text:                { name: Текст }
+      url:                 { name: Url }
+      is_active:           { name: Акт. }
+      created_at:          { name: Дата }
+    list:
+      title:               Меню
+      layout:              tabular
+      display:             [id,parent_id,ord,name,url,is_active,created_at]
+      object_actions:
+        _edit:             ~
+        _delete:           ~
+      max_per_page:        15
+    edit:
+      title:               Меню
+      display:             [id,parent_id,ord,name,announce,text,url,is_active,created_at]
+      fields:
+        name:              { type: input_tag, params: size=50x10 }
+        created_at:        { type: input_date_tag, params: rich=on }

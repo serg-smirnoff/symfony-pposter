@@ -1,0 +1,17 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Фото постеры. Купить фото постер
+    description:  Фото постеры. Купить фото постер
+    keywords:     Фото постеры. Купить фото постер
+    language:     ru
+    robots:       index, follow
+
+  stylesheets:    [main.css, jquery.lightbox-0.5.css]
+
+  javascripts:    [jquery.min.js, jquery.innerfade.js, jquery.lightbox-0.5.min.js, script.js]
+
+  has_layout:     on
+  layout:         layout

@@ -1,0 +1,28 @@
+generator:
+  class:                   sfPropelAdminGenerator
+  param:
+    model_class:           Meta
+    theme:                 default
+    fields:
+      id:                  { name: Id }
+      title:               { name: Title }
+      keywords:            { name: Keywords }
+      description:         { name: Description }
+      is_active:           { name: Акт. }
+      created_at:          { name: Дата }
+    list:
+      title:               Мета тэги
+      layout:              tabular
+      display:             [id,title,keywords,description,is_active,created_at]
+      object_actions:
+        _edit:             ~
+        _delete:           ~
+      max_per_page:        15
+    edit:
+      title:               Меню
+      display:             [id,title,keywords,description,is_active,created_at]
+      fields:
+        title:             { type: input_tag, params: size=50x20 }
+        keywords:          { type: input_tag, params: size=50x20 }
+        description:       { type: textarea_tag, params: size=47x10 }
+        created_at:        { type: input_date_tag, params: rich=on }
